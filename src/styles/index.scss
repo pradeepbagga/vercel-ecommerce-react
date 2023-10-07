@@ -1,0 +1,39 @@
+@import './colors.scss';
+
+/* GLOBAL CSS */
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin: 0;
+    color: rgba($base-text-color, 0.80);
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    background-color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: rgba($base-text-color, 1);
+}
+
+/***************** COMMON CLASSES *****************/
+.noPadding {
+    padding:0 !important;
+}
+/*****************  *****************/
+/*****************  *****************/
+/*****************  *****************/
+/*****************  *****************/
+/*****************  *****************/
+/*****************  *****************/
+/*****************  *****************/
