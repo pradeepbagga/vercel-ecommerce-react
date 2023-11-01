@@ -1,0 +1,12 @@
+.categoryList {
+    > div {
+        display: flex;
+        align-items: baseline;
+        padding: 1px 0;
+    }
+    label {
+        display: inline-block;
+        text-transform: capitalize;
+        padding-left: 7px;
+    }
+}
