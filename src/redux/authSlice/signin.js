@@ -39,7 +39,7 @@ const userSlice = createSlice({
             state.userLoggedIn = true;
 
             let d = new Date();
-            d.setTime(d.getTime() + 2 * 60 * 1000);
+            d.setTime(d.getTime() + 60 * 60 * 1000);
             document.cookie = 'token=' + action.payload.token + ';expires=' + d.toGMTString() + ';';
             localStorage.setItem("appToken", action.payload.token);
             // localStorage.setItem("user",JSON.stringify(action.payload.user));
