@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchProductById } from '../../redux/productSlice/product';
 import Loader from '../../utils/Loader/Loader';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import ProductDetailData from './productDetailData';
+import ProductGallery from './productGallery';
 
 class ProductDetail extends Component {
     constructor(props) {
@@ -39,13 +43,17 @@ class ProductDetail extends Component {
                     isLoading && <Loader />
                 }
                 {
-                    product && (<div>
+                    product && (<Grid container spacing={2} className='productDetailPage'>
                         {
-                            console.log('PRODUCT - ', product)
+                            // console.log('PRODUCT - ', product)
                         }
-                        <h2>{product.title}</h2>
-                        <p>{product.description}</p>
-                    </div>)
+                        <Grid item lg={5} md={6} sm={12} xs={12} >
+                            <ProductGallery productImages={product.images} text={product.title} />
+                        </Grid>
+                        <Grid item lg={7} md={6} sm={12} xs={12} className='productContent'>
+                            <ProductDetailData product={product} />                      
+                        </Grid>
+                    </Grid>)
                 }
             </>
         );

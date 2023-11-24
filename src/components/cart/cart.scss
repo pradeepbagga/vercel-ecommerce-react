@@ -1,3 +1,4 @@
+@import "../../styles/colors.scss";
 
 .shopping-cart {
     /*************** ***************/
@@ -11,43 +12,76 @@
     }
     /*************** ***************/
     .container-cart-rows {
+        margin-top: 1em;
         .cart-row {
-            // display: grid;
-            // row-gap: 2%;
-            // grid-template-columns: 20% 20% 20% 20% 20%;
-            display: flex;
+            display: grid;
+            row-gap: 2%;
+            grid-template-columns: 120px calc(40% - 120px) 20% 20% 20%;
+            padding: 1.2em 0 1em 0;
+            /* display: flex; */
+            border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
 
             & > div {
-                padding:0 10px;
+                padding: 0 0.5em;
             }
 
-            & > div:nth-of-type(1) {
-                background-color: red;
-                flex-grow: 1;
+            .price,
+            .count-change {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
-            & > div:nth-of-type(2) {
-                background-color: yellow;
-                flex-grow: 1;
-            }
-            & > div:nth-of-type(3) {
-                background-color: green;
-                flex-grow: 1;
-            }
-            & > div:nth-of-type(4) {
-                background-color: blue;
-                flex-grow: 1;
-            }
-            & > div:nth-of-type(5) {
-                background-color: aqua;
-                flex-grow: 1;
+
+            .price-delete {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    flex: 1;
+                }
             }
 
             .cart-img {
                 img {
                     max-width: 100px;
                     height: auto;
-                    border-radius: 5px;
+                    border-radius: 4px;
                 }
+            }
+
+            .anchorColor,
+            .count-change svg {
+                cursor: pointer;
+            }
+            .count-change {
+                .MuiTextField-root {
+                    max-width: 80px;
+                    input {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .cart-row.row-heading {
+            font-weight: 500;
+            .cart-img {
+                max-height: 5px;
+                overflow: hidden;
+                img {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+
+        .cart-total-row {
+            display: flex;
+            margin: 0.5em 0;
+
+            & > div:nth-of-type(1) {
+                flex-grow: 1;
             }
         }
     }
@@ -56,5 +90,11 @@
     /*************** ***************/
     /*************** ***************/
     /*************** ***************/
+    .cart-no-content {
+        text-align: center;
+        padding-top: 4em;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
     /*************** ***************/
 }

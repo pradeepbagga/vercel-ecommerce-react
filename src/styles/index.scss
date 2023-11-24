@@ -30,7 +30,16 @@ a {
     color: $anchor;
 }
 
+.anchorColor {
+    color: $anchor;
+}
+
 /***************** COMMON CLASSES *****************/
+hr {
+    border:0;
+    border-top:1px $hr solid;
+    margin: 0.75em 0;
+}
 .noPadding {
     padding:0 !important;
 }
@@ -41,6 +50,10 @@ a {
 
 .error {
     color: $error;
+}
+
+.text-center {
+    text-align: center;
 }
 /*****************  *****************/
 /*****************  *****************/

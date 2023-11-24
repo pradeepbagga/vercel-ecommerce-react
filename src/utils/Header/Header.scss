@@ -18,9 +18,17 @@
     }
 
     nav {
-        a {
+        display: flex;
+        align-items: center;
+
+        a, span.logout {
             display: inline-block;
             margin-left: 1em;
+            cursor: pointer;
+        }
+        span {
+            
+            
         }
     }
 }

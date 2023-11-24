@@ -147,7 +147,7 @@ export const fetchProductById = createAsyncThunk(
     "content/fetchProductById",
     async (id) => {
         const apiUrl = `${process.env.REACT_APP_BACKEND_URL + process.env.REACT_APP_PRODUCTS}/${id}`;
-        console.log('fetchProductById - ', apiUrl)
+        // console.log('fetchProductById - ', apiUrl)
         try {
             const res = await axios.get(apiUrl);
             // console.log('res - ', res)
